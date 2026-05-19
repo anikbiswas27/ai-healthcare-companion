@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>AI Healthcare Companion</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+
+            <h1>🩺 AI Healthcare Companion</h1>
+
+            <p class="warning">
+                Smart symptom analysis • Educational use only
+            </p>
+
+        </div>
+
+        <div id="chatBox">
+
+            <div class="bot-message">
+                👋 Hello! Describe your symptoms and I’ll help with possible causes and basic remedies.
+            </div>
+
+        </div>
+
+        <div class="input-area">
+
+            <input
+                type="text"
+                id="userInput"
+                placeholder="Type your symptoms here..."
+            >
+
+            <button onclick="sendMessage()">
+                Send
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
