@@ -50,3 +50,17 @@ async function sendMessage() {
 
     chatBox.scrollTop = chatBox.scrollHeight;
 }
+let isSending = false;
+
+document.getElementById("userInput").addEventListener("keydown", async function(event) {
+    if (event.key === "Enter" && !isSending) {
+        event.preventDefault();
+        isSending = true;
+
+        try {
+            await sendMessage();
+        } finally {
+            isSending = false;
+        }
+    }
+});
